@@ -7,7 +7,7 @@ class Agreements {
     return res.data;
   }
   async accept(k, v, brief, data) {
-    const res = await this._srv.push("/v1/agreement/"+k+"/"+v+"/"+brief, data);
+    const res = await this._srv.post("/v1/agreement/"+k+"/"+v+"/"+brief, data);
     return res.data; 
   }
   async withdraw(k, v, brief) {
