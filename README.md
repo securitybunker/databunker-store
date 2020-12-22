@@ -43,4 +43,38 @@ cont change = { lastLoginAt: user.claim.iat };
 await databunker.users.set("token", "a3542566-4491-11eb-8269-2e04ce962524", change);
 ```
 
+## Extract all agreements t be displayed on the signup page
+```
+async function loadSignupAgreements() {
+  const allAgreements = await databunker.agreements.rawlist();
+  let agreements = [];
+  if (allAgreements.status == "ok") {
+    for (const idx in allAgreements.rows) {
+      const r = allAgreements.rows[idx];
+      if (r.module == 'signup-page' && r.basistype == "consent") {
+        agreements.push(r);
+      }
+    }
+  }
+  return agreements;
+}
+```
+
+## Save data in user app collection
+```
+const appData = {country: "EU"}
+await databunker.collection("data").set("token", "a3542566-4491-11eb-8269-2e04ce962524", data);
+
+## Read user data from app collection
+const data = await databunker.collection("data").get("token", req.user.token);
+
+## Accept an agreement
+```
+await databunker.agreements.accept("email", req.body.email, "privacy-accept", {});
+```
+
+## Withdraw an agreement
+```
+await databunker.agreements.withdraw("email", req.body.email, "privacy-accept");
+```
 
