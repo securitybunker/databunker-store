@@ -19,6 +19,17 @@ class Server{
       return {data:{status:'error', message:err.response.data}};
     }
   }
+  async del(url) {
+    const headers = {'X-Bunker-Token': this.token};
+    try {
+      return await axios.delete(this.srv + url, {headers: headers});
+    } catch (err) {
+      if (err.response.data.status) {
+        return {data: err.response.data};
+      }
+      return {data:{status:'error', message:err.response.data}};
+    }
+  }
   async post(url, data) {
     const headers = {
       'X-Bunker-Token': this.token,

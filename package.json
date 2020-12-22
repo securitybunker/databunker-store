@@ -1,6 +1,6 @@
 {
   "name": "@databunker/store",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Databunker storage class for nodejs",
   "main": "index.js",
   "scripts": {
