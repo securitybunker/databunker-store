@@ -64,9 +64,12 @@ async function loadSignupAgreements() {
 ```
 const appData = {country: "EU"}
 await databunker.collection("data").set("token", "a3542566-4491-11eb-8269-2e04ce962524", data);
+```
 
 ## Read user data from app collection
+```
 const data = await databunker.collection("data").get("token", req.user.token);
+```
 
 ## Accept an agreement
 ```
