@@ -55,7 +55,7 @@ cont change = { lastLoginAt: user.claim.iat };
 await databunker.users.set("token", "a3542566-4491-11eb-8269-2e04ce962524", change);
 ```
 
-## Extract all agreements t be displayed on the signup page
+## Extract all agreements to displayed on the signup page
 ```
 async function loadSignupAgreements() {
   const allAgreements = await databunker.agreements.rawlist();
