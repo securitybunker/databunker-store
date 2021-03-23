@@ -1,6 +1,6 @@
 {
   "name": "@databunker/store",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Databunker storage class for nodejs",
   "main": "index.js",
   "scripts": {
@@ -11,6 +11,7 @@
     "url": "git+https://github.com/securitybunker/databunker-store.git"
   },
   "keywords": [
+    "compliance",
     "passport.js",
     "encryption",
     "privacy",
@@ -27,7 +28,7 @@
   },
   "homepage": "https://github.com/securitybunker/databunker-store#readme",
   "dependencies": {
-    "axios": "^0.21.0",
+    "axios": "^0.21.1",
     "uuid": "^8.3.2"
   }
 }
