@@ -1,5 +1,9 @@
 # databunker-store
-Databunker storage class for nodejs
+
+The **Databunker Store** is a Node.js client library for **Databunker API** to store personal records. **Databunker** is a Swiss army knife tool for **encrypted storage of personal records or PII**:
+
+* https://databunker.org/
+* https://databunker.org/use-case/privacy-by-design-default/
 
 
 Prerequisites
