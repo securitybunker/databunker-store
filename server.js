@@ -21,7 +21,7 @@ class Server{
     };
     const options = {
         httpAgent, httpsAgent, headers
-    }
+    };
     try {
       return await axios.get(this.srv + url, options);
     } catch (err) {
@@ -35,7 +35,7 @@ class Server{
     const headers = {'X-Bunker-Token': this.token};
     const options = {
         httpAgent, httpsAgent, headers
-    }
+    };
     try {
       return await axios.delete(this.srv + url, options);
     } catch (err) {
@@ -52,7 +52,7 @@ class Server{
     };
     const options = {
         httpAgent, httpsAgent, headers
-    }
+    };
     try {
       return await axios.post(this.srv + url, data, options);
     } catch (err) {
@@ -69,7 +69,7 @@ class Server{
     };
     const options = {
         httpAgent, httpsAgent, headers
-    }
+    };
     try {
       return await axios.put(this.srv + url, data, options);
     } catch (err) {
