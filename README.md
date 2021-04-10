@@ -97,3 +97,29 @@ await databunker.agreements.accept("email", req.body.email, "privacy-accept", {}
 await databunker.agreements.withdraw("email", req.body.email, "privacy-accept");
 ```
 
+## Full example
+
+```
+const { v4: uuidv4 } = require('uuid');
+const app = require('express')();
+const DatabunkerStore = require('@databunker/store');
+
+const port = 3200;
+const host = '0.0.0.0';
+const DataBunkerConf = {
+  url: 'http://localhost:3000',
+  token: 'DEMO'
+};
+const databunker = new DatabunkerStore(DataBunkerConf);
+
+app.get('/', async (req, res) => {
+  const user = await databunker.users.get("phone", "4444");
+  const data = user.data;
+  res.send("user: "+data["email"]+"\n");
+  res.end();
+})
+
+app.listen(port, host, () => {
+  console.log(`Example app listening at http://${host}:${port}`)
+})
+```
