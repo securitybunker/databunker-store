@@ -28,9 +28,9 @@
   },
   "homepage": "https://github.com/securitybunker/databunker-store#readme",
   "dependencies": {
-    "axios": "^0.21.1",
+    "axios": "^1.0.0",
     "http": "0.0.1-security",
     "https": "^1.0.0",
-    "uuid": "^8.3.2"
+    "uuid": "^11.0.0"
   }
 }
